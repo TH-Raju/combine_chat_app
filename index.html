@@ -32,9 +32,15 @@
         </div>
     </div>
 
+    <h1 id="room"></h1>
+
     <script src="/socket.io/socket.io.js"></script>
     <script>
         let socket = io();
+
+        socket.on("cooking", (data)=> {
+            document.getElementById("room").innerHTML = data
+        })
 
 
         function sendMsg(){
