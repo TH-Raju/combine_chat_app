@@ -12,11 +12,11 @@ io.on("connection", (socket)=> {
 
     socket.join("kitchen");
     let sizeOfRooms = io.sockets.adapter.rooms.get("kitchen").size;
-    io.sockets.in('kitchen').emit("cooking", "Fried Rice and chicken for " + sizeOfRooms )
+    io.sockets.in('kitchen').emit("cooking", "Fried Rice and chicken for " + sizeOfRooms );
 
     socket.join("bed-room");
-    io.sockets.in('bed-room').emit("bedRoom", "Let's sleeping together")
-    io.sockets.in('bed-room').emit("restRoom", "I'm taking Rest")
+    io.sockets.in('bed-room').emit("bedRoom", "Let's sleeping together");
+    io.sockets.in('bed-room').emit("restRoom", "I'm taking Rest");
 
 
     socket.on("chat", (data)=> {
